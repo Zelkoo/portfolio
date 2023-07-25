@@ -36,3 +36,29 @@
 .nav-links a:hover{
   color: var(--main-color)
 }
+
+.dot-container{
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-right: 40px;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #888;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+.dot.active,
+.dot:hover {
+  background: #00abf0;
+}
