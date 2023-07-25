@@ -1,0 +1,38 @@
+:root {
+  --bg-color: #081b26;
+  --second-bg-color: #112e42;
+  --text-color: #ededed;
+  --main-color: #00abf0;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*background-color: #db6969;*/
+  padding: 10px;
+}
+
+.author-name {
+  flex: 1;
+  padding-left: 10%;
+  font-weight: bold;
+  font-size: 25px;
+  color: var(--text-color);
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  font-size: 1.2rem;
+  margin-right: 20px;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: .4s;
+}
+.nav-links a.active,
+.nav-links a:hover{
+  color: var(--main-color)
+}

@@ -1,0 +1,53 @@
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.circle-container {
+  width: 350px;
+  height: 250px;
+  border-radius: 25%;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.section-title {
+  color: #ededed
+}
+span {
+  color: #00abf0;
+}
+.circle-container img {
+  width: 100%;
+  height: auto;
+  filter: opacity(40%);
+  transition: 0.8s;
+}
+
+.circle-container img:hover{
+  filter: opacity(1);
+}
+
+.about-me-description{
+  font-size: 1.5rem;
+  margin: 0 100px 0 100px;
+  padding: 30px;
+  color: #ededed;
+}
+
+.about-me-description-title {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.read-more {
+  background-color: #00abf0 !important;
+  color: #ededed !important;
+  font-size: 1.5rem;
+  height: 3rem;
+}
