@@ -1,13 +1,13 @@
 <div class="menu-container">
   <div class="author-name">
-      Adam Toda.
+<!--      Adam Toda.-->
   </div>
 <!--  <button mat-icon-button>-->
 <!--    <mat-icon>menu</mat-icon>-->
 <!--  </button>-->
   <nav class="nav-links">
-    <a routerLinkActive="active" (click)="navigateToHome()" class="active">Home</a>
-    <a href="">About</a>
+    <a routerLinkActive="active" [class.active]="isHomeActive" (click)="navigateToHome()" class="active">Home</a>
+    <a routerLinkActive="active" [class.active]="isAboutActive" (click)="navigateToAbout()">About</a>
     <a href="">Skills</a>
     <a href="">Education</a>
     <a href="">Contact</a>
@@ -15,10 +15,10 @@
 </div>
 <div class="dot-container">
   <div class="pagination">
-    <span class="dot active" routerLinkActive="active" (click)="navigateToHome()"></span>
-<!--    <span class="dot" routerLinkActive="active" (click)="navigateToAbout('about')"></span>-->
-<!--    <span class="dot" routerLinkActive="active" (click)="navigateToAbout('skills')"></span>-->
-<!--    <span class="dot" routerLinkActive="active" (click)="navigateToAbout('education')"></span>-->
-<!--    <span class="dot" routerLinkActive="active" (click)="navigateToAbout('contact')"></span>-->
+    <span class="dot"  [class.active]="isHomeActive" routerLinkActive="active" (click)="navigateToHome()"></span>
+    <span class="dot" [class.active]="isAboutActive" routerLinkActive="active" (click)="navigateToAbout()"></span>
+<!--    <span class="dot" routerLinkActive="active" (click)="navigateToHome('skills')"></span>-->
+<!--    <span class="dot" routerLinkActive="active" (click)="navigateToHome('education')"></span>-->
+<!--    <span class="dot" routerLinkActive="active" (click)="navigateToHome('contact')"></span>-->
   </div>
 </div>

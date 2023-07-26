@@ -9,7 +9,7 @@ export const fader =
           left:0,
           width: '100%',
           opacity: 0,
-          transform: 'scale(00) translateY(100%)'
+          transform: 'scale(1) translateY(100%)'
         })
       ]),
       query(':enter', [
