@@ -4,7 +4,6 @@
   --text-color: #ededed;
   --main-color: #00abf0;
 }
-
 .menu-container {
   display: flex;
   justify-content: space-between;
@@ -31,6 +30,7 @@
   text-decoration: none;
   color: var(--text-color);
   transition: .4s;
+  cursor: pointer;
 }
 .nav-links a.active,
 .nav-links a:hover{
@@ -61,4 +61,7 @@
 .dot.active,
 .dot:hover {
   background: #00abf0;
+}
+span {
+  z-index: 555;
 }

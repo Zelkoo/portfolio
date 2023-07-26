@@ -1,4 +1,8 @@
 <nav-menu></nav-menu>
 <!--<home-section></home-section>-->
 <!--<about-section ></about-section>-->
-<router-outlet></router-outlet>
+<!--<router-outlet></router-outlet>-->
+
+<main [@routeAnimations]="prepareRoute(outlet)" class="content">
+  <router-outlet #outlet="outlet"></router-outlet>
+</main>
