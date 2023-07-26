@@ -62,3 +62,6 @@
 .dot:hover {
   background: #00abf0;
 }
+span {
+  z-index: 555;
+}

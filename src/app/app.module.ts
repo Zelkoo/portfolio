@@ -11,8 +11,8 @@ import {HomeComponent} from "./section/home-section/home.component";
 import {RouterModule, Routes} from "@angular/router";
 
 const routes: Routes = [
-  { path: 'about', component: AboutComponent },
-  { path: 'home', component: HomeComponent }
+  { path: 'home', component: HomeComponent,  data: {animation: 'isLeft'}},
+  { path: 'about', component: AboutComponent, data: {animation: 'isRight'} }
 ];
 
 

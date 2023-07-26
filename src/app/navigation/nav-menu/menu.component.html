@@ -6,7 +6,7 @@
 <!--    <mat-icon>menu</mat-icon>-->
 <!--  </button>-->
   <nav class="nav-links">
-    <a href="" class="active">Home</a>
+    <a routerLinkActive="active" (click)="navigateToHome()" class="active">Home</a>
     <a href="">About</a>
     <a href="">Skills</a>
     <a href="">Education</a>
@@ -15,10 +15,10 @@
 </div>
 <div class="dot-container">
   <div class="pagination">
-    <span class="dot active" routerLinkActive="active" (click)="navigateToAbout('home')"></span>
-    <span class="dot" routerLinkActive="active" (click)="navigateToAbout('about')"></span>
-    <span class="dot" routerLinkActive="active" (click)="navigateToAbout('skills')"></span>
-    <span class="dot" routerLinkActive="active" (click)="navigateToAbout('education')"></span>
-    <span class="dot" routerLinkActive="active" (click)="navigateToAbout('contact')"></span>
+    <span class="dot active" routerLinkActive="active" (click)="navigateToHome()"></span>
+<!--    <span class="dot" routerLinkActive="active" (click)="navigateToAbout('about')"></span>-->
+<!--    <span class="dot" routerLinkActive="active" (click)="navigateToAbout('skills')"></span>-->
+<!--    <span class="dot" routerLinkActive="active" (click)="navigateToAbout('education')"></span>-->
+<!--    <span class="dot" routerLinkActive="active" (click)="navigateToAbout('contact')"></span>-->
   </div>
 </div>
