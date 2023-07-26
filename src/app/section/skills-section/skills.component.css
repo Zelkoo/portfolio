@@ -1,0 +1,39 @@
+h1 {
+  color: #ededed;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+.skill-text {
+  color: #00abf0
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.code-container{
+  display: flex;
+  justify-content: center;
+  gap: 8%;
+  height: 65vh;
+  padding-top: 5%;
+}
+
+
+.code-language {
+  border: solid #00abf0 2px;
+  width: 30%;
+  height: auto;
+  border-radius: 5%;
+}
+.code-professional{
+  border: solid #00abf0 2px;
+  width: 30%;
+  height: auto;
+  border-radius: 5%;
+}
+mat-expansion-panel-header {
+  background: #00abf0 !important;
+}
