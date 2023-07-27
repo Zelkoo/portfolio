@@ -9,10 +9,14 @@ import {MatButtonModule} from "@angular/material/button";
 import {AboutComponent} from "./section/about-section/about.component";
 import {HomeComponent} from "./section/home-section/home.component";
 import {RouterModule, Routes} from "@angular/router";
+import {SkillsComponent} from "./section/skills-section/skills.component";
+import {MatExpansionModule} from '@angular/material/expansion';
+import {LaptopComponent} from "./laptop-image/laptop.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent,  data: {animation: 'isLeft'}},
-  { path: 'about', component: AboutComponent, data: {animation: 'isRight'} }
+  { path: 'about', component: AboutComponent, data: {animation: 'isRight'} },
+  { path: 'skills', component: SkillsComponent, data: {animation: 'isRight'} }
 ];
 
 
@@ -21,13 +25,16 @@ const routes: Routes = [
     AppComponent,
     MenuComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    SkillsComponent,
+    LaptopComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
+    MatExpansionModule,
     RouterModule.forRoot(routes)
   ],
   exports: [RouterModule],

@@ -9,7 +9,7 @@ import {NavigationEnd, Router} from "@angular/router";
 export class MenuComponent implements OnInit{
   public isHomeActive: boolean = true;
   public isAboutActive: boolean = false;
-
+  public isSkillsActive: boolean = false;
   constructor(private router: Router) { }
 
   ngOnInit() {
@@ -25,9 +25,13 @@ export class MenuComponent implements OnInit{
   navigateToAbout() {
     this.router.navigate([`/about`]);
   }
+  navigateToSkills() {
+    this.router.navigate([`/skills`]);
+  }
   private setActiveStates() {
     const currentUrl = this.router.url;
     this.isHomeActive = currentUrl === '/home';
     this.isAboutActive = currentUrl === '/about';
+    this.isSkillsActive = currentUrl === '/skills'
   }
 }
