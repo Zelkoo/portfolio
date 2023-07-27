@@ -1,0 +1,376 @@
+$width-code-one: 5%;
+$width-code-two: 5%;
+$width-code-three: 30%;
+$width-code-four: 50%;
+$width-code-five: 33%;
+$width-code-six: 27%;
+$width-code-seven: 5%;
+$width-code-eight: 5%;
+$width-code-nine: 27%;
+$width-code-ten: 20%;
+$width-code-eleven: 33%;
+$width-code-twelve: 17%;
+$width-code-thirteen: 5%;
+$laptop-margin-left: 50px;
+$laptop-frame-height: 40vh;
+$laptop-frame-width: 30%;
+$laptop-frame-border-color: #353939;
+$laptop-frame-border-width: 2px;
+$laptop-frame-border-radius: 40px;
+$laptop-frame-background: #353939;
+
+$screen-frame-height: 35vh;
+$screen-frame-width: 27%;
+$screen-frame-position-top: 6%;
+$screen-frame-margin-left: 19px;
+$screen-frame-border-radius: 26px;
+$screen-frame-z-index: 5;
+
+$toolbar-height: 5vh;
+$toolbar-background: gray;
+$toolbar-border-radius: 20px;
+$toolbar-position-top: -3px;
+$toolbar-z-index: 5;
+
+$toolbar-tab-background: #EEF3F5;
+$toolbar-tab-height: 2vh;
+$toolbar-tab-position-top: 28px;
+$toolbar-tab-z-index: 5;
+
+$tab-background: #EEF3F5;
+$tab-width: 30%;
+$tab-height: 2vh;
+$tab-position-top: -15px;
+$tab-position-left: 35px;
+$tab-border-radius: 15px;
+$tab-z-index: 5;
+
+@mixin keyframes-width($animation-name, $width, $delay) {
+  @keyframes #{$animation-name} {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: $width;
+    }
+  }
+  animation: #{$animation-name} 1s forwards $delay;
+}
+
+.laptop-container {
+  margin-left: $laptop-margin-left;
+}
+
+.laptop-frame {
+  height: $laptop-frame-height;
+  width: $laptop-frame-width;
+  border: solid $laptop-frame-border-color $laptop-frame-border-width;
+  border-radius: $laptop-frame-border-radius;
+  background-color: $laptop-frame-background;
+}
+
+.screen-frame {
+  height: $screen-frame-height;
+  width: $screen-frame-width;
+  position: absolute;
+  display: flex;
+  top: $screen-frame-position-top;
+  margin-left: $screen-frame-margin-left;
+  border-radius: $screen-frame-border-radius;
+  z-index: $screen-frame-z-index;
+}
+
+.toolbar {
+  height: $toolbar-height;
+  width: 100%;
+  border-top-left-radius: $toolbar-border-radius;
+  border-top-right-radius: $toolbar-border-radius;
+  background-color: $toolbar-background;
+  position: absolute;
+  top: $toolbar-position-top;
+  z-index: $toolbar-z-index;
+}
+
+.toolbar-tab {
+  background-color: $toolbar-tab-background;
+  width: 100%;
+  height: $toolbar-tab-height;
+  position: relative;
+  top: $toolbar-tab-position-top;
+  z-index: $toolbar-tab-z-index;
+}
+
+.tab {
+  background-color: $tab-background;
+  width: $tab-width;
+  height: $tab-height;
+  position: relative;
+  top: $tab-position-top;
+  left: $tab-position-left;
+  border-top-left-radius: $tab-border-radius;
+  border-top-right-radius: $tab-border-radius;
+  z-index: $tab-z-index;
+}
+
+.screen-container {
+  background-color: #3F4E4D;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2%;
+}
+
+.close, .expand, .minimize {
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  z-index: 5;
+  position: relative;
+  display: inline-flex;
+  margin: 3px;
+  top: -15px;
+}
+
+.close {
+  background-color: #59ABDF;
+}
+
+.expand {
+  background-color: #AC79B5;
+}
+
+.minimize {
+  background-color: #CF6257;
+}
+
+.solid-line {
+  transform: rotate(180deg);
+  border: 3px solid #94A6A6;
+  background: #94A6A6;
+  position: absolute;
+  left: 40px;
+  height: 98%;
+  top: -7px;
+  width: 1px;
+  z-index: 0;
+}
+
+.dot-line hr {
+  border: #94A6A6 solid 3px;
+  height: 5px;
+  width: 1%;
+  position: relative;
+  left: 0;
+  z-index: 1;
+  background-color: #94A6A6;
+}
+
+.dot-line {
+  display: flex;
+  flex-direction: column;
+  left: 3%;
+  position: absolute;
+  top: 23px;
+}
+
+.code-container {
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  top: 49px;
+  left: 56px;
+  width: 100%;
+}
+
+.code-container div {
+  height: 12px;
+  background-color: #e77f24;
+}
+
+.code-container .code-one {
+  width: 0;
+  background-color: #3596d2;
+  @include keyframes-width(code-one, 5%, 0s);
+}
+
+.code-container .code-two {
+  width: 0;
+  background-color: #e77f24;
+  @include keyframes-width(code-two, 5%, 1s);
+}
+
+.code-container .code-three {
+  position: relative;
+  left: 30px;
+  width: 0;
+  background-color: #894B9E;
+  @include keyframes-width(code-three, 30%, 2s);
+}
+
+.code-container .code-four {
+  position: relative;
+  left: 30px;
+  width: 0;
+  background-color: #68C185;
+  @include keyframes-width(code-four, 50%, 3s);
+}
+
+.code-container .code-five {
+  position: relative;
+  left: 30px;
+  width: 0;
+  background-color: #3596d2;
+  @include keyframes-width(code-five, 33%, 4s);
+}
+
+.code-container .code-six {
+  position: relative;
+  left: 30px;
+  width: 0;
+  background-color: #e77f24;
+  @include keyframes-width(code-six, 27%, 5s);
+}
+
+.code-container .code-seven {
+  width: 0;
+  background-color: #e77f24;
+  @include keyframes-width(code-seven, 5%, 6s);
+}
+
+.code-container .code-eight {
+  width: 0;
+  background-color: #894B9E;
+  @include keyframes-width(code-one, 5%, 7s);
+}
+
+.code-container .code-nine {
+  position: relative;
+  left: 30px;
+  width: 0;
+  background-color: #e77f24;
+  @include keyframes-width(code-nine, 27%, 8s);
+}
+
+.code-container .code-ten {
+  position: relative;
+  left: 30px;
+  width: 0;
+  background-color: #3596d2;
+  @include keyframes-width(code-ten, 20%, 9s);
+}
+
+.code-container .code-eleven {
+  position: relative;
+  left: 30px;
+  width: 0;
+  background-color: #68C185;
+  @include keyframes-width(code-eleven, 33%, 10s);
+}
+
+.code-container .code-twelve {
+  position: relative;
+  left: 30px;
+  width: 0;
+  background-color: #894B9E;
+  @include keyframes-width(code-twelve, 17%, 11s);
+}
+
+.code-container .code-thirteen {
+  width: 0;
+  background-color: #894B9E;
+  @include keyframes-width(code-one, 5%, 12s);
+}
+
+@mixin keyframes-width($animation-name, $width) {
+  @keyframes #{$animation-name} {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: $width;
+    }
+  }
+}
+
+@include keyframes-width(code-one, $width-code-one);
+@include keyframes-width(code-one, $width-code-two);
+@include keyframes-width(code-three, $width-code-three);
+@include keyframes-width(code-four, $width-code-four);
+@include keyframes-width(code-five, $width-code-five);
+@include keyframes-width(code-six, $width-code-six);
+@include keyframes-width(code-one, $width-code-seven);
+@include keyframes-width(code-one, $width-code-eight);
+@include keyframes-width(code-nine, $width-code-nine);
+@include keyframes-width(code-ten, $width-code-ten);
+@include keyframes-width(code-eleven, $width-code-eleven);
+@include keyframes-width(code-twelve, $width-code-twelve);
+@include keyframes-width(code-one, $width-code-thirteen);
+
+@media screen and (max-width: 1750px) {
+  .code-container {
+    gap: 7px;
+    top: 52px;
+  }
+  .dot-line {
+    top: -6px;
+  }
+  .solid-line {
+    top: -5px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .screen-container {
+    width: 85%;
+  }
+  .toolbar-tab{
+    top: 30px;
+    width: 100%;
+  }
+  .toolbar {
+    width: 85%;
+  }
+  .code-container {
+    top: 52px;
+  }
+  .dot-line {
+    top: 50px;
+    left: 15px;
+  }
+  .code-container {
+    gap: 12px;
+  }
+  .code-container .three {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 820px) {
+
+  .code-container {
+    gap: 16px;
+    top: 60px;
+  }
+  .toolbar {
+    width: 85%;
+  }
+  .screen-container {
+    width: 86%;
+  }
+  .toolbar-tab {
+    top: 35px;
+  }
+  .code-container .three {
+    width: 45%;
+  }
+  .dot-line {
+    left: 7%;
+    top: 57px;
+    gap: 5px;
+  }
+}

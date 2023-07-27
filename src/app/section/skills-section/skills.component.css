@@ -37,3 +37,9 @@ h1 {
 mat-expansion-panel-header {
   background: #00abf0 !important;
 }
+img {
+  position: absolute;
+  width: 40%;
+  right:0;
+}
+

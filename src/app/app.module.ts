@@ -11,6 +11,7 @@ import {HomeComponent} from "./section/home-section/home.component";
 import {RouterModule, Routes} from "@angular/router";
 import {SkillsComponent} from "./section/skills-section/skills.component";
 import {MatExpansionModule} from '@angular/material/expansion';
+import {LaptopComponent} from "./laptop-image/laptop.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent,  data: {animation: 'isLeft'}},
@@ -25,7 +26,8 @@ const routes: Routes = [
     MenuComponent,
     AboutComponent,
     HomeComponent,
-    SkillsComponent
+    SkillsComponent,
+    LaptopComponent
   ],
   imports: [
     BrowserModule,
