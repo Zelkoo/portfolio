@@ -19,7 +19,6 @@ export class HomeComponent {
     const deltaY = event.deltaY;
 
     if (deltaY > -100) {
-      // Wykonaj akcję, gdy przewinięcie jest większe niż 100
       this.router.navigate(['/about']);
     }
   }

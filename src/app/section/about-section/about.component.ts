@@ -11,11 +11,13 @@ export class AboutComponent implements OnInit{
   }
   public ngOnInit() {
   }
-  @HostListener("window:wheel", ['$event'])
-  onWindowScroll() {
-    //@ts-ignore
-    if (event?.deltaY as any === -100) {
-      this.router.navigate(['/home']);
+  @HostListener('window:wheel', ['$event'])
+  onWindowScroll(event: WheelEvent) {
+    const deltaY = event.deltaY;
+    console.log(deltaY)
+
+    if (deltaY < -100) {
+      this.router.navigate(['/home'])
     }
   }
 }

@@ -10,7 +10,7 @@ export class MenuComponent implements OnInit{
   public isHomeActive: boolean = true;
   public isAboutActive: boolean = false;
   public isSkillsActive: boolean = false;
-  public isMenuOpen: boolean = true
+  public isMenuOpen: boolean = false
   constructor(private router: Router) { }
 
   ngOnInit() {
