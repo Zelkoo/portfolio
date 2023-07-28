@@ -12,6 +12,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {SkillsComponent} from "./section/skills-section/skills.component";
 import {MatExpansionModule} from '@angular/material/expansion';
 import {LaptopComponent} from "./laptop-image/laptop.component";
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent,  data: {animation: 'isLeft'}},
@@ -35,7 +36,8 @@ const routes: Routes = [
     MatButtonModule,
     MatIconModule,
     MatExpansionModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FontAwesomeModule
   ],
   exports: [RouterModule],
   providers: [],

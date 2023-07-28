@@ -4,12 +4,13 @@ import {NavigationEnd, Router} from "@angular/router";
 @Component({
   selector: 'nav-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit{
   public isHomeActive: boolean = true;
   public isAboutActive: boolean = false;
   public isSkillsActive: boolean = false;
+  public isMenuOpen: boolean = true
   constructor(private router: Router) { }
 
   ngOnInit() {
@@ -19,7 +20,11 @@ export class MenuComponent implements OnInit{
       }
     });
   }
-  navigateToHome() {
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen
+  }
+  navigateToHome(event: Event) {
+    this.isMenuOpen = false
     this.router.navigate([`/home`]);
   }
   navigateToAbout() {

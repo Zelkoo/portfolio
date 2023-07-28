@@ -1,0 +1,103 @@
+$menuBreakPoint: 400px;
+$menuHeight: 50px;
+:root {
+  --bg-color: #081b26;
+  --second-bg-color: #112e42;
+  --text-color: #ededed;
+  --main-color: #00abf0;
+}
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.author-name {
+  flex: 1;
+  padding-left: 10%;
+  font-weight: bold;
+  font-size: 25px;
+  color: var(--text-color);
+}
+
+.burger {
+  padding: 0 10px;
+  display: none;
+  cursor: pointer;
+  color: #00ABF0;
+  @media (max-width: $menuBreakPoint) {
+    display: block;
+  }
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  font-size: 1.2rem;
+  margin-right: 20px;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: .4s;
+  cursor: pointer;
+}
+.nav-links a.active,
+.nav-links a:hover{
+  color: var(--main-color)
+}
+
+.dot-container{
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-right: 40px;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #888;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+.dot.active,
+.dot:hover {
+  background: #00abf0;
+}
+span {
+  z-index: 555;
+}
+  @media(max-width: $menuBreakPoint) {
+    .nav-links {
+      display: none;
+    }
+    .is-open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: #{$menuHeight + 2};
+      background: #1b5171;
+      width: 100%;
+      z-index: 5;
+      left: 0;
+      gap: 20px;
+    }
+    .nav-links a {
+      display: flex;
+      font-weight: 700;
+      height: 3rem;
+      justify-content: center;
+      border-bottom: solid 1px #112e42;
+      width: 100%;
+      font-size: 1.3rem;
+    }
+  }
