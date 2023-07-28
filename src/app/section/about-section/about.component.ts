@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, HostListener, Inject, OnInit, ViewChild} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'about-section',
@@ -6,10 +7,15 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./about.component.css'],
 })
 export class AboutComponent implements OnInit{
-  constructor() {
+  constructor(private router: Router) {
   }
-
   public ngOnInit() {
-  
+  }
+  @HostListener("window:wheel", ['$event'])
+  onWindowScroll() {
+    //@ts-ignore
+    if (event?.deltaY as any === -100) {
+      this.router.navigate(['/home']);
+    }
   }
 }
