@@ -16,7 +16,7 @@ export class AboutComponent implements OnInit{
     const deltaY = event.deltaY;
     console.log(deltaY)
 
-    if (deltaY < -100) {
+    if (deltaY <= -100) {
       this.router.navigate(['/home'])
     }
   }
