@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 import {Router} from "@angular/router";
+import {WheelService} from "../../services/wheel.service";
 
 @Component({
   selector: 'skills-section',
@@ -7,9 +8,11 @@ import {Router} from "@angular/router";
   styleUrls: ['./skills.component.css'],
 })
 export class SkillsComponent {
-  constructor(private router: Router) { }
+  constructor(private router: Router,  private wheelService: WheelService) { }
   panelOpenState = false;
-  navigateToAbout() {
-    this.router.navigate(['/about']);
+
+  @HostListener('window:wheel', ['$event'])
+  onScroll(event: WheelEvent) {
+    this.wheelService.onWindowScroll(event)
   }
 }
